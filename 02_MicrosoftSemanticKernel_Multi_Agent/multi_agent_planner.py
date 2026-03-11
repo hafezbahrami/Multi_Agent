@@ -66,47 +66,47 @@ class Agent:
                     tools_description.append(
                                             f"{attr} → {skill_obj.description}"
                                         )
-            system_prompt = f"""
-            You are {self.name}.
+        system_prompt = f"""
+                    You are {self.name}.
 
-            You can use the following tools:
+                    You can use the following tools:
 
-            {tools_description}
+                    {tools_description}
 
-            Choose the BEST tool for the user request.
+                    Choose the BEST tool for the user request.
 
-            Return ONLY JSON like this:
+                    Return ONLY JSON like this:
 
-            {{
-            "tool": "tool_name",
-            "parameters": {{
-            }}
-            }}
+                        {{
+                                "tool": "tool_name",
+                                "parameters": {{
+                                                }}
+                        }}
 
-            Examples:
+                    Examples:
 
-            User: Send an email
-            Output:
-            {{
-            "tool": "send_email",
-            "parameters": {{
-            "to": "...",
-            "body": "..."
-            }}
-            }}
+                    User: Send an email
+                    Output:
+                    {{
+                            "tool": "send_email",
+                            "parameters": {{
+                                            "to": "...",
+                                            "body": "..."
+                                            }}
+                    }}
 
-            User: Schedule a meeting
-            Output:
-            {{
-            "tool": "create_event",
-            "parameters": {{
-            "title": "...",
-            "date": "...",
-            "time": "...+
-            "
-            }}
-            }}
-            """
+                    User: Schedule a meeting
+                    Output:
+                    {{
+                            "tool": "create_event",
+                            "parameters": {{
+                                            "title": "...",
+                                            "date": "...",
+                                            "time": "...+
+                                            "
+                                            }}
+                    }}
+        """
 
         messages = [
             {"role": "system", "content": system_prompt},
