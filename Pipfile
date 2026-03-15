@@ -22,6 +22,7 @@ semantic-kernel="*"
 ipykernel="*"
 tensorboardX="*"
 torchvision="*"
+pytest="*"
 
 
 

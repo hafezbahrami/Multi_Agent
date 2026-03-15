@@ -3,9 +3,6 @@
 import inspect
 
 
-SENSITIVE_FIELD_HINTS = {"secret", "internal", "policy", "heuristic", "strategy", "ip"}
-
-
 # -------------------------------------------
 # Parameter normalization
 # -------------------------------------------
@@ -54,73 +51,27 @@ class Agent:
         self.name = name
         self.skills = skills
         self.llm = llm_client
-        self.api_contract = self._build_api_contract()
-
-    def _build_api_contract(self):
-        """
-        Build an explicit IP-protected allowlist of tools exposed to the LLM.
-
-        `skills` is expected to map: {"tool_name": skill_instance}
-        Only `tool_name` is exposed, and only if the skill implements it.
-        """
-        contract = {}
-
-        for tool_name, skill_obj in self.skills.items():
-            if not hasattr(skill_obj, tool_name): # This checks if the skill actually implements the tool.
-                continue
-
-            tool_method = getattr(skill_obj, tool_name)
-            if not callable(tool_method):
-                continue
-
-            sig = inspect.signature(tool_method)
-            params = list(sig.parameters.keys())
-            contract[tool_name] = {
-                "method": tool_method,
-                "description": getattr(skill_obj, "description", "No description"),
-                "parameters": params,
-            }
-
-        return contract
-
-    def _sanitize_output(self, payload):
-        """
-        ven if internal data accidentally leaks into the response, your code removes it.
-        Remove fields that look like internal/IP-bearing data before returning
-        results to the planner/user.
-        """
-        if not isinstance(payload, dict):
-            return payload
-
-        safe = {}
-        for key, value in payload.items():
-            lowered = key.lower()
-            if any(hint in lowered for hint in SENSITIVE_FIELD_HINTS):
-                continue
-            safe[key] = value
-        return safe
 
     def execute(self, user_query: str):
 
         tools_description = []
 
-        for tool_name, tool_meta in self.api_contract.items():
-            tools_description.append(f"{tool_name} → {tool_meta['description']}")
+        for skill_name, skill_obj in self.skills.items():
 
-        tools_json_schema = {
-            tool_name: tool_meta["parameters"] for tool_name, tool_meta in self.api_contract.items()
-        }
-
+            for attr in dir(skill_obj):         # dir() returns all attributes and methods of an object as strings, like: ['_init_', '_str_', 'search', 'summarize', 'description'].
+                if attr.startswith("_"):        # _ are usually private or internal attributes. We want to ignore those.   
+                    continue
+                fn = getattr(skill_obj, attr)
+                if callable(fn):
+                    tools_description.append(
+                                            f"{attr} → {skill_obj.description}"
+                                        )
         system_prompt = f"""
                     You are {self.name}.
 
-                    You can use ONLY the following tool API surface:
+                    You can use the following tools:
 
                     {tools_description}
-
-                    Allowed JSON parameter keys per tool:
-
-                    {tools_json_schema}
 
                     Choose the BEST tool for the user request.
 
@@ -177,34 +128,31 @@ class Agent:
         if not llm_gen_tool_name:
             return response.get("response", "LLM did not return a tool")
 
-        if llm_gen_tool_name not in self.api_contract:
-            return {
-                "error": (
-                    f"Tool '{llm_gen_tool_name}' is not exposed by {self.name}. "
-                    "Only explicitly allowlisted APIs are callable."
-                )
-            }
-
         # -----------------------------------
         # Execute skill
         # -----------------------------------
 
-        tool_method = self.api_contract[llm_gen_tool_name]["method"]
+        for skill in self.skills.values():
 
-        params = normalize_parameters(llm_gen_tool_name, llm_gen_tool_params, tool_method)
+            if hasattr(skill, llm_gen_tool_name):
 
-        # Fallback extraction if LLM forgot task/title
-        if llm_gen_tool_name == "create_task" and "task" not in params:
-            params["task"] = user_query
+                tool_method = getattr(skill, llm_gen_tool_name)
 
-        if llm_gen_tool_name == "create_event" and "title" not in params:
-            params["title"] = user_query
+                params = normalize_parameters(llm_gen_tool_name, llm_gen_tool_params, tool_method)
+                
+                # Fallback extraction if LLM forgot task/title
+                if llm_gen_tool_name == "create_task" and "task" not in params:
+                    params["task"] = user_query
 
-        try:
-            raw_result = tool_method(**params)
-            return self._sanitize_output(raw_result)
-        except Exception as e:
-            return {"error": str(e)}
+                if llm_gen_tool_name == "create_event" and "title" not in params:
+                    params["title"] = user_query
+
+                try:
+                    return tool_method(**params)
+                except Exception as e:
+                    return {"error": str(e)}
+
+        return {"error": f"Tool '{llm_gen_tool_name}' not found in {self.name}"}
 
 
 # -------------------------------------------
