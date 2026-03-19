@@ -152,41 +152,41 @@ public class Agent
             kv => kv.Key,
             kv => kv.Value.Parameters);
 
-        var systemPrompt = $"""
-            You are {Name}.
+        var systemPrompt = $$"""
+            You are {{Name}}.
 
             You can use ONLY the following tool API surface:
 
-            {string.Join("\n", toolsDescription)}
+            {{string.Join("\n", toolsDescription)}}
 
             Allowed JSON parameter keys per tool:
 
-            {System.Text.Json.JsonSerializer.Serialize(toolsSchema)}
+            {{System.Text.Json.JsonSerializer.Serialize(toolsSchema)}}
 
             Choose the BEST tool for the user request.
 
             Return ONLY JSON like this:
 
-            {{
+            {
                 "tool": "tool_name",
-                "parameters": {{ }}
-            }}
+                "parameters": { }
+            }
 
             Examples:
 
             User: Send an email
             Output:
-            {{
+            {
                 "tool": "send_email",
-                "parameters": {{ "to": "...", "body": "..." }}
-            }}
+                "parameters": { "to": "...", "body": "..." }
+            }
 
             User: Schedule a meeting
             Output:
-            {{
+            {
                 "tool": "create_event",
-                "parameters": {{ "title": "...", "date": "...", "time": "..." }}
-            }}
+                "parameters": { "title": "...", "date": "...", "time": "..." }
+            }
             """;
 
         var messages = new List<ChatMessage>

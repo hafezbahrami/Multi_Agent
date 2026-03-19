@@ -55,7 +55,7 @@ foreach (var query in demoQueries)
 // -------------------------------------------------------
 // Interactive mode (opt-in)
 // -------------------------------------------------------
-const bool doInteractive = false;
+bool doInteractive = false;
 
 if (doInteractive)
 {

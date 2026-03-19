@@ -35,8 +35,6 @@ public class WebSearchSkill : ISkill
 {
     public string Description => "Search the web for information";
 
-    private readonly string _rankingProfile = "research-ranking-v2";
-
     public Dictionary<string, object> search(string query)
     {
         Console.WriteLine($"\nWEB SEARCH EXECUTED!\nQuery: {query}");
