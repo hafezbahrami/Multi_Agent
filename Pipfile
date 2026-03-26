@@ -17,6 +17,8 @@ peft=">=0.15.0"
 matplotlib="*"
 python-dotenv="*"
 semantic-kernel="*"
+mcp="*"
+uvicorn = "*"
 
 [dev-packages]
 ipykernel="*"
@@ -24,8 +26,5 @@ tensorboardX="*"
 torchvision="*"
 pytest="*"
 
-
-
 [requires]
 python_version = "3.12"
-
