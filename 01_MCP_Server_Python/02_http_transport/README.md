@@ -65,6 +65,48 @@ You can change what the *client* connects to via:
 export MCP_SERVER_URL=http://127.0.0.1:8000/mcp
 ```
 
+## What is the sequence of events (Server ↔ Client)?
+
+This is the “story” of what happens when you run the HTTP server + client.
+
+### 1) Server process starts first (when you debug/run `MCP_server.py`)
+
+1. Python executes the file top-to-bottom.
+2. `mcp = FastMCP("HelloMCP")` creates the MCP app instance.
+3. `@mcp.tool()` registers `hello_tool(...)` into the server’s tool catalog.
+4. `mcp.run(transport="streamable-http")` starts the server’s main loop:
+  - FastMCP builds an ASGI app and starts an HTTP server (uvicorn under the hood).
+  - The server asks the OS to create a listening TCP socket and bind it to `(host, port)`.
+    - Defaults are typically `127.0.0.1:8000`.
+  - The server begins listening and then mostly “waits idle” until a client connects.
+
+**How this differs from stdio transport**
+
+- With `transport="stdio"`, there is no host/port and no socket.
+- The server’s “listening loop” is: read JSON-RPC messages from `stdin`, write responses to `stdout`.
+
+### 2) Client process starts and connects (when you run `Dummy_MCP_http_Client.py`)
+
+1. The client chooses a URL (defaults to `http://127.0.0.1:8000/mcp`).
+2. `streamable_http_client(SERVER_URL)` opens the HTTP transport:
+  - The OS performs a normal TCP connection (handshake) to port `8000` on `127.0.0.1`.
+  - Over that connection, the MCP client sends/receives MCP JSON-RPC messages using HTTP.
+3. `ClientSession(...)` runs the MCP protocol steps:
+  - `initialize()` (handshake: protocol version, capabilities, server info)
+  - `list_tools()` (discover `hello_tool`)
+  - `call_tool("hello_tool", {"name": "World"})` (server runs your Python function and returns the result)
+
+**How this differs from stdio transport**
+
+- In stdio, the client usually spawns the server as a subprocess and connects immediately via pipes:
+  - server `stdin/stdout` are the “transport” (not a URL).
+- In HTTP, the server can be a long-running service and clients can connect later by URL.
+
+### 3) Optional: `--spawn-server` in the HTTP client
+
+If you run `Dummy_MCP_http_Client.py --spawn-server`, the client starts the HTTP server as a child process for convenience, waits briefly, then connects by URL.
+The transport is still HTTP; `--spawn-server` only changes *how the server process is started*.
+
 ## Big picture: HTTP transport vs stdio transport
 
 MCP is a protocol (JSON-RPC framed messages such as `initialize`, `tools/list`, `tools/call`).
