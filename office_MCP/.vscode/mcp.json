@@ -1,0 +1,14 @@
+{
+  "servers": {
+    "mq-office": {
+      "type": "stdio",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "${workspaceFolder}/src/MQ.Office.MCP.Server/MQ.Office.MCP.Server.csproj",
+        "--no-launch-profile"
+      ]
+    }
+  }
+}

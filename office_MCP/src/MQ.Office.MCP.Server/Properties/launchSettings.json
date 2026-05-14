@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MQ.Office.MCP.Server": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

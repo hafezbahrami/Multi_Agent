@@ -1,0 +1,1172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="1" branch-rate="1" version="1.9" timestamp="1778603860" lines-covered="252" lines-valid="252" branches-covered="130" branches-valid="130">
+  <sources>
+    <source>C:\code_base\Aspentech.ENG.MCP.Server\TestResults\office_MCP\src\</source>
+  </sources>
+  <packages>
+    <package name="MQ.Office.MCP.Server" line-rate="1" branch-rate="1" complexity="11">
+      <classes>
+        <class name="MQ.Office.MCP.Server.AppHostConfiguration" filename="MQ.Office.MCP.Server\AppHostConfiguration.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="AddOfficeMcpServices" signature="(Microsoft.Extensions.DependencyInjection.IServiceCollection)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="1" branch="False" />
+                <line number="12" hits="1" branch="False" />
+                <line number="13" hits="1" branch="False" />
+                <line number="15" hits="1" branch="False" />
+                <line number="16" hits="1" branch="False" />
+                <line number="17" hits="1" branch="False" />
+                <line number="18" hits="1" branch="False" />
+                <line number="19" hits="1" branch="False" />
+                <line number="21" hits="1" branch="False" />
+                <line number="22" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="1" branch="False" />
+            <line number="12" hits="1" branch="False" />
+            <line number="13" hits="1" branch="False" />
+            <line number="15" hits="1" branch="False" />
+            <line number="16" hits="1" branch="False" />
+            <line number="17" hits="1" branch="False" />
+            <line number="18" hits="1" branch="False" />
+            <line number="19" hits="1" branch="False" />
+            <line number="21" hits="1" branch="False" />
+            <line number="22" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="MQ.Office.MCP.Server.TempFileLoggerProvider" filename="MQ.Office.MCP.Server\TempFileLoggerProvider.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="CreateLogger" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="24" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="Dispose" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="26" hits="8" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="3" branch="False" />
+                <line number="15" hits="3" branch="False" />
+                <line number="16" hits="3" branch="False" />
+                <line number="17" hits="3" branch="False" />
+                <line number="18" hits="3" branch="False" />
+                <line number="19" hits="3" branch="False" />
+                <line number="20" hits="3" branch="False" />
+                <line number="21" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="2" branch="False" />
+            <line number="26" hits="8" branch="False" />
+            <line number="12" hits="3" branch="False" />
+            <line number="15" hits="3" branch="False" />
+            <line number="16" hits="3" branch="False" />
+            <line number="17" hits="3" branch="False" />
+            <line number="18" hits="3" branch="False" />
+            <line number="19" hits="3" branch="False" />
+            <line number="20" hits="3" branch="False" />
+            <line number="21" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="MQ.Office.MCP.Server.TempFileLoggerProvider/FileLogger" filename="MQ.Office.MCP.Server\TempFileLoggerProvider.cs" line-rate="1" branch-rate="1" complexity="7">
+          <methods>
+            <method name="BeginScope" signature="(TState)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="30" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="IsEnabled" signature="(Microsoft.Extensions.Logging.LogLevel)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="32" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="Log" signature="(Microsoft.Extensions.Logging.LogLevel,Microsoft.Extensions.Logging.EventId,TState,System.Exception,System.Func`3&lt;TState,System.Exception,System.String&gt;)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="40" hits="3" branch="False" />
+                <line number="41" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="13" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="42" hits="1" branch="False" />
+                <line number="44" hits="2" branch="False" />
+                <line number="45" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="172" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="46" hits="1" branch="False" />
+                <line number="48" hits="2" branch="False" />
+                <line number="49" hits="2" branch="False" />
+                <line number="50" hits="2" branch="False" />
+                <line number="51" hits="2" branch="False" />
+                <line number="52" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String,System.String,System.Object,System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="28" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="1" branch="False" />
+            <line number="32" hits="6" branch="False" />
+            <line number="40" hits="3" branch="False" />
+            <line number="41" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="13" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="42" hits="1" branch="False" />
+            <line number="44" hits="2" branch="False" />
+            <line number="45" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="172" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="46" hits="1" branch="False" />
+            <line number="48" hits="2" branch="False" />
+            <line number="49" hits="2" branch="False" />
+            <line number="50" hits="2" branch="False" />
+            <line number="51" hits="2" branch="False" />
+            <line number="52" hits="3" branch="False" />
+            <line number="28" hits="2" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="MQ.Office.MCP.Server.Excel" line-rate="1" branch-rate="1" complexity="69">
+      <classes>
+        <class name="MQ.Office.MCP.Server.Excel.ExcelService" filename="MQ.Office.MCP.Server.Excel\Services\ExcelService.cs" line-rate="1" branch-rate="1" complexity="15">
+          <methods>
+            <method name="InjectComApp" signature="(System.Object)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="34" hits="8" branch="False" />
+              </lines>
+            </method>
+            <method name="EnsureActiveWorkbook" signature="()" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="83" hits="9" branch="False" />
+                <line number="84" hits="9" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="12" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="85" hits="3" branch="False" />
+                <line number="86" hits="3" branch="False" />
+                <line number="87" hits="3" branch="False" />
+                <line number="89" hits="6" branch="False" />
+                <line number="90" hits="17" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="33" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="91" hits="1" branch="False" />
+                <line number="92" hits="1" branch="False" />
+                <line number="93" hits="1" branch="False" />
+                <line number="94" hits="1" branch="False" />
+                <line number="95" hits="1" branch="False" />
+                <line number="98" hits="5" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="203" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="99" hits="1" branch="False" />
+                <line number="100" hits="1" branch="False" />
+                <line number="101" hits="1" branch="False" />
+                <line number="102" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="Dispose" signature="()" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="107" hits="4" branch="False" />
+                <line number="108" hits="5" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="9" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="109" hits="3" branch="False" />
+                <line number="111" hits="3" branch="False" />
+                <line number="112" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="38" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="113" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="45" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="114" hits="1" branch="False" />
+                <line number="115" hits="6" branch="False" />
+                <line number="116" hits="3" branch="False" />
+                <line number="117" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Microsoft.Extensions.Logging.ILogger`1&lt;MQ.Office.MCP.Server.Excel.ExcelService&gt;)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="14" hits="15" branch="False" />
+                <line number="18" hits="15" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="3" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="22" hits="15" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="34" hits="8" branch="False" />
+            <line number="83" hits="9" branch="False" />
+            <line number="84" hits="9" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="12" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="85" hits="3" branch="False" />
+            <line number="86" hits="3" branch="False" />
+            <line number="87" hits="3" branch="False" />
+            <line number="89" hits="6" branch="False" />
+            <line number="90" hits="17" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="33" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="91" hits="1" branch="False" />
+            <line number="92" hits="1" branch="False" />
+            <line number="93" hits="1" branch="False" />
+            <line number="94" hits="1" branch="False" />
+            <line number="95" hits="1" branch="False" />
+            <line number="98" hits="5" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="203" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="99" hits="1" branch="False" />
+            <line number="100" hits="1" branch="False" />
+            <line number="101" hits="1" branch="False" />
+            <line number="102" hits="4" branch="False" />
+            <line number="107" hits="4" branch="False" />
+            <line number="108" hits="5" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="9" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="109" hits="3" branch="False" />
+            <line number="111" hits="3" branch="False" />
+            <line number="112" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="38" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="113" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="45" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="114" hits="1" branch="False" />
+            <line number="115" hits="6" branch="False" />
+            <line number="116" hits="3" branch="False" />
+            <line number="117" hits="4" branch="False" />
+            <line number="14" hits="15" branch="False" />
+            <line number="18" hits="15" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="3" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="22" hits="15" branch="False" />
+          </lines>
+        </class>
+        <class name="MQ.Office.MCP.Server.Excel.ExcelService" filename="MQ.Office.MCP.Server.Excel\Services\ExcelService.Workbook.cs" line-rate="1" branch-rate="1" complexity="40">
+          <methods>
+            <method name="OpenWorkbook" signature="(System.String)" line-rate="1" branch-rate="1" complexity="20">
+              <lines>
+                <line number="11" hits="4" branch="False" />
+                <line number="12" hits="4" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="19" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="13" hits="4" branch="False" />
+                <line number="14" hits="4" branch="False" />
+                <line number="16" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="43" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="19" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="140" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="20" hits="1" branch="False" />
+                <line number="21" hits="1" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="151" type="jump" coverage="100%" />
+                    <condition number="223" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="22" hits="1" branch="False" />
+                <line number="23" hits="1" branch="False" />
+                <line number="25" hits="2" branch="False" />
+                <line number="26" hits="2" branch="False" />
+                <line number="27" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="354" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="28" hits="1" branch="False" />
+                <line number="30" hits="1" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="378" type="jump" coverage="100%" />
+                    <condition number="460" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="34" hits="2" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="577" type="jump" coverage="100%" />
+                    <condition number="638" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="35" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="SaveWorkbook" signature="(System.String)" line-rate="1" branch-rate="1" complexity="16">
+              <lines>
+                <line number="39" hits="6" branch="False" />
+                <line number="40" hits="6" branch="False" />
+                <line number="41" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="13" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="43" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="99" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="110" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="46" hits="1" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="212" type="jump" coverage="100%" />
+                    <condition number="273" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="47" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
+                <line number="51" hits="1" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="377" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="52" hits="1" branch="False" />
+                <line number="53" hits="1" branch="False" />
+                <line number="55" hits="2" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="499" type="jump" coverage="100%" />
+                    <condition number="560" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="56" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="CloseWorkbook" signature="(System.Boolean)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="60" hits="3" branch="False" />
+                <line number="61" hits="3" branch="False" />
+                <line number="62" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="13" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="63" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="96" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="64" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="4" branch="False" />
+            <line number="12" hits="4" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="19" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="13" hits="4" branch="False" />
+            <line number="14" hits="4" branch="False" />
+            <line number="16" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="43" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="19" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="140" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="20" hits="1" branch="False" />
+            <line number="21" hits="1" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="151" type="jump" coverage="100%" />
+                <condition number="223" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="22" hits="1" branch="False" />
+            <line number="23" hits="1" branch="False" />
+            <line number="25" hits="2" branch="False" />
+            <line number="26" hits="2" branch="False" />
+            <line number="27" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="354" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="28" hits="1" branch="False" />
+            <line number="30" hits="1" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="378" type="jump" coverage="100%" />
+                <condition number="460" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="34" hits="2" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="577" type="jump" coverage="100%" />
+                <condition number="638" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="35" hits="2" branch="False" />
+            <line number="39" hits="6" branch="False" />
+            <line number="40" hits="6" branch="False" />
+            <line number="41" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="13" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="43" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="99" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="1" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="110" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="46" hits="1" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="212" type="jump" coverage="100%" />
+                <condition number="273" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="47" hits="1" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="1" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="377" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="52" hits="1" branch="False" />
+            <line number="53" hits="1" branch="False" />
+            <line number="55" hits="2" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="499" type="jump" coverage="100%" />
+                <condition number="560" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="56" hits="2" branch="False" />
+            <line number="60" hits="3" branch="False" />
+            <line number="61" hits="3" branch="False" />
+            <line number="62" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="13" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="63" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="96" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="64" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="MQ.Office.MCP.Server.Excel.ExcelTools" filename="MQ.Office.MCP.Server.Excel\Tools\ExcelTools.cs" line-rate="1" branch-rate="1" complexity="9">
+          <methods>
+            <method name="Ok" signature="(System.Object)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="Fail" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="FailSafe" signature="(System.Exception)" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="19" hits="6" branch="True" condition-coverage="100% (6/6)">
+                  <conditions>
+                    <condition number="10" type="jump" coverage="100%" />
+                    <condition number="18" type="jump" coverage="100%" />
+                    <condition number="26" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="20" hits="6" branch="False" />
+                <line number="21" hits="3" branch="False" />
+                <line number="22" hits="1" branch="False" />
+                <line number="23" hits="1" branch="False" />
+                <line number="24" hits="1" branch="False" />
+                <line number="25" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(MQ.Office.MCP.Server.Excel.IExcelService,Microsoft.Extensions.Logging.ILogger`1&lt;MQ.Office.MCP.Server.Excel.ExcelTools&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="9" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="3" branch="False" />
+            <line number="17" hits="6" branch="False" />
+            <line number="19" hits="6" branch="True" condition-coverage="100% (6/6)">
+              <conditions>
+                <condition number="10" type="jump" coverage="100%" />
+                <condition number="18" type="jump" coverage="100%" />
+                <condition number="26" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="20" hits="6" branch="False" />
+            <line number="21" hits="3" branch="False" />
+            <line number="22" hits="1" branch="False" />
+            <line number="23" hits="1" branch="False" />
+            <line number="24" hits="1" branch="False" />
+            <line number="25" hits="6" branch="False" />
+            <line number="11" hits="9" branch="False" />
+          </lines>
+        </class>
+        <class name="MQ.Office.MCP.Server.Excel.ExcelTools" filename="MQ.Office.MCP.Server.Excel\Tools\ExcelTools.Workbook.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="OpenWorkbook" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="5" branch="False" />
+                <line number="23" hits="5" branch="False" />
+                <line number="24" hits="5" branch="False" />
+                <line number="25" hits="1" branch="False" />
+                <line number="26" hits="1" branch="False" />
+                <line number="28" hits="4" branch="False" />
+                <line number="29" hits="4" branch="False" />
+                <line number="30" hits="4" branch="False" />
+                <line number="31" hits="4" branch="False" />
+                <line number="33" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="SaveWorkbook" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="43" hits="2" branch="False" />
+                <line number="45" hits="2" branch="False" />
+                <line number="46" hits="2" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
+                <line number="51" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
+                <line number="54" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="CloseWorkbook" signature="(System.Boolean)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="61" hits="2" branch="False" />
+                <line number="63" hits="2" branch="False" />
+                <line number="64" hits="2" branch="False" />
+                <line number="65" hits="1" branch="False" />
+                <line number="67" hits="1" branch="False" />
+                <line number="68" hits="1" branch="False" />
+                <line number="69" hits="1" branch="False" />
+                <line number="70" hits="1" branch="False" />
+                <line number="72" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(MQ.Office.MCP.Server.Excel.IExcelService,Microsoft.Extensions.Logging.ILogger`1&lt;MQ.Office.MCP.Server.Excel.ExcelTools&gt;)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="10" hits="9" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="10" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="5" branch="False" />
+            <line number="23" hits="5" branch="False" />
+            <line number="24" hits="5" branch="False" />
+            <line number="25" hits="1" branch="False" />
+            <line number="26" hits="1" branch="False" />
+            <line number="28" hits="4" branch="False" />
+            <line number="29" hits="4" branch="False" />
+            <line number="30" hits="4" branch="False" />
+            <line number="31" hits="4" branch="False" />
+            <line number="33" hits="5" branch="False" />
+            <line number="43" hits="2" branch="False" />
+            <line number="45" hits="2" branch="False" />
+            <line number="46" hits="2" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
+            <line number="54" hits="2" branch="False" />
+            <line number="61" hits="2" branch="False" />
+            <line number="63" hits="2" branch="False" />
+            <line number="64" hits="2" branch="False" />
+            <line number="65" hits="1" branch="False" />
+            <line number="67" hits="1" branch="False" />
+            <line number="68" hits="1" branch="False" />
+            <line number="69" hits="1" branch="False" />
+            <line number="70" hits="1" branch="False" />
+            <line number="72" hits="2" branch="False" />
+            <line number="10" hits="9" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="10" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="MQ.Office.MCP.Server.Word" line-rate="1" branch-rate="1" complexity="71">
+      <classes>
+        <class name="MQ.Office.MCP.Server.Word.WordService" filename="MQ.Office.MCP.Server.Word\Services\WordService.cs" line-rate="1" branch-rate="1" complexity="15">
+          <methods>
+            <method name="InjectComApp" signature="(System.Object)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="34" hits="8" branch="False" />
+              </lines>
+            </method>
+            <method name="EnsureActiveDocument" signature="()" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="83" hits="9" branch="False" />
+                <line number="84" hits="9" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="12" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="85" hits="3" branch="False" />
+                <line number="86" hits="3" branch="False" />
+                <line number="87" hits="3" branch="False" />
+                <line number="89" hits="6" branch="False" />
+                <line number="90" hits="17" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="33" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="91" hits="1" branch="False" />
+                <line number="92" hits="1" branch="False" />
+                <line number="93" hits="1" branch="False" />
+                <line number="94" hits="1" branch="False" />
+                <line number="95" hits="1" branch="False" />
+                <line number="98" hits="5" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="203" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="99" hits="1" branch="False" />
+                <line number="100" hits="1" branch="False" />
+                <line number="101" hits="1" branch="False" />
+                <line number="102" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="Dispose" signature="()" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="107" hits="4" branch="False" />
+                <line number="108" hits="5" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="9" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="109" hits="3" branch="False" />
+                <line number="111" hits="3" branch="False" />
+                <line number="112" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="38" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="113" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="45" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="114" hits="1" branch="False" />
+                <line number="115" hits="6" branch="False" />
+                <line number="116" hits="3" branch="False" />
+                <line number="117" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Microsoft.Extensions.Logging.ILogger`1&lt;MQ.Office.MCP.Server.Word.WordService&gt;)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="14" hits="15" branch="False" />
+                <line number="18" hits="15" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="3" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="22" hits="15" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="34" hits="8" branch="False" />
+            <line number="83" hits="9" branch="False" />
+            <line number="84" hits="9" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="12" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="85" hits="3" branch="False" />
+            <line number="86" hits="3" branch="False" />
+            <line number="87" hits="3" branch="False" />
+            <line number="89" hits="6" branch="False" />
+            <line number="90" hits="17" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="33" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="91" hits="1" branch="False" />
+            <line number="92" hits="1" branch="False" />
+            <line number="93" hits="1" branch="False" />
+            <line number="94" hits="1" branch="False" />
+            <line number="95" hits="1" branch="False" />
+            <line number="98" hits="5" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="203" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="99" hits="1" branch="False" />
+            <line number="100" hits="1" branch="False" />
+            <line number="101" hits="1" branch="False" />
+            <line number="102" hits="4" branch="False" />
+            <line number="107" hits="4" branch="False" />
+            <line number="108" hits="5" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="9" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="109" hits="3" branch="False" />
+            <line number="111" hits="3" branch="False" />
+            <line number="112" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="38" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="113" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="45" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="114" hits="1" branch="False" />
+            <line number="115" hits="6" branch="False" />
+            <line number="116" hits="3" branch="False" />
+            <line number="117" hits="4" branch="False" />
+            <line number="14" hits="15" branch="False" />
+            <line number="18" hits="15" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="3" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="22" hits="15" branch="False" />
+          </lines>
+        </class>
+        <class name="MQ.Office.MCP.Server.Word.WordService" filename="MQ.Office.MCP.Server.Word\Services\WordService.Document.cs" line-rate="1" branch-rate="1" complexity="42">
+          <methods>
+            <method name="OpenDocument" signature="(System.String)" line-rate="1" branch-rate="1" complexity="20">
+              <lines>
+                <line number="11" hits="4" branch="False" />
+                <line number="12" hits="4" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="19" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="13" hits="4" branch="False" />
+                <line number="14" hits="4" branch="False" />
+                <line number="16" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="43" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="19" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="140" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="20" hits="1" branch="False" />
+                <line number="21" hits="1" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="151" type="jump" coverage="100%" />
+                    <condition number="223" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="22" hits="1" branch="False" />
+                <line number="23" hits="1" branch="False" />
+                <line number="25" hits="2" branch="False" />
+                <line number="26" hits="2" branch="False" />
+                <line number="27" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="354" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="28" hits="1" branch="False" />
+                <line number="30" hits="1" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="378" type="jump" coverage="100%" />
+                    <condition number="460" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="34" hits="2" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="577" type="jump" coverage="100%" />
+                    <condition number="638" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="35" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="SaveDocument" signature="(System.String)" line-rate="1" branch-rate="1" complexity="16">
+              <lines>
+                <line number="39" hits="6" branch="False" />
+                <line number="40" hits="6" branch="False" />
+                <line number="41" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="13" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="43" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="99" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="110" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="46" hits="1" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="212" type="jump" coverage="100%" />
+                    <condition number="273" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="47" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
+                <line number="51" hits="1" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="377" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="52" hits="1" branch="False" />
+                <line number="53" hits="1" branch="False" />
+                <line number="55" hits="2" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="499" type="jump" coverage="100%" />
+                    <condition number="560" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="56" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="CloseDocument" signature="(System.Boolean)" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="60" hits="3" branch="False" />
+                <line number="61" hits="3" branch="False" />
+                <line number="62" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="13" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="64" hits="2" branch="True" condition-coverage="100% (4/4)">
+                  <conditions>
+                    <condition number="96" type="jump" coverage="100%" />
+                    <condition number="179" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="65" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="4" branch="False" />
+            <line number="12" hits="4" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="19" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="13" hits="4" branch="False" />
+            <line number="14" hits="4" branch="False" />
+            <line number="16" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="43" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="19" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="140" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="20" hits="1" branch="False" />
+            <line number="21" hits="1" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="151" type="jump" coverage="100%" />
+                <condition number="223" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="22" hits="1" branch="False" />
+            <line number="23" hits="1" branch="False" />
+            <line number="25" hits="2" branch="False" />
+            <line number="26" hits="2" branch="False" />
+            <line number="27" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="354" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="28" hits="1" branch="False" />
+            <line number="30" hits="1" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="378" type="jump" coverage="100%" />
+                <condition number="460" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="34" hits="2" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="577" type="jump" coverage="100%" />
+                <condition number="638" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="35" hits="2" branch="False" />
+            <line number="39" hits="6" branch="False" />
+            <line number="40" hits="6" branch="False" />
+            <line number="41" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="13" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="43" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="99" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="1" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="110" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="46" hits="1" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="212" type="jump" coverage="100%" />
+                <condition number="273" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="47" hits="1" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="1" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="377" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="52" hits="1" branch="False" />
+            <line number="53" hits="1" branch="False" />
+            <line number="55" hits="2" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="499" type="jump" coverage="100%" />
+                <condition number="560" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="56" hits="2" branch="False" />
+            <line number="60" hits="3" branch="False" />
+            <line number="61" hits="3" branch="False" />
+            <line number="62" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="13" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="64" hits="2" branch="True" condition-coverage="100% (4/4)">
+              <conditions>
+                <condition number="96" type="jump" coverage="100%" />
+                <condition number="179" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="65" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="MQ.Office.MCP.Server.Word.WordTools" filename="MQ.Office.MCP.Server.Word\Tools\WordTools.cs" line-rate="1" branch-rate="1" complexity="9">
+          <methods>
+            <method name="Ok" signature="(System.Object)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="Fail" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="FailSafe" signature="(System.Exception)" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="22" hits="6" branch="True" condition-coverage="100% (6/6)">
+                  <conditions>
+                    <condition number="10" type="jump" coverage="100%" />
+                    <condition number="18" type="jump" coverage="100%" />
+                    <condition number="26" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="23" hits="6" branch="False" />
+                <line number="24" hits="3" branch="False" />
+                <line number="25" hits="1" branch="False" />
+                <line number="26" hits="1" branch="False" />
+                <line number="27" hits="1" branch="False" />
+                <line number="28" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(MQ.Office.MCP.Server.Word.IWordService,Microsoft.Extensions.Logging.ILogger`1&lt;MQ.Office.MCP.Server.Word.WordTools&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="9" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="3" branch="False" />
+            <line number="17" hits="6" branch="False" />
+            <line number="22" hits="6" branch="True" condition-coverage="100% (6/6)">
+              <conditions>
+                <condition number="10" type="jump" coverage="100%" />
+                <condition number="18" type="jump" coverage="100%" />
+                <condition number="26" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="23" hits="6" branch="False" />
+            <line number="24" hits="3" branch="False" />
+            <line number="25" hits="1" branch="False" />
+            <line number="26" hits="1" branch="False" />
+            <line number="27" hits="1" branch="False" />
+            <line number="28" hits="6" branch="False" />
+            <line number="11" hits="9" branch="False" />
+          </lines>
+        </class>
+        <class name="MQ.Office.MCP.Server.Word.WordTools" filename="MQ.Office.MCP.Server.Word\Tools\WordTools.Document.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="OpenDocument" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="5" branch="False" />
+                <line number="23" hits="5" branch="False" />
+                <line number="24" hits="5" branch="False" />
+                <line number="25" hits="1" branch="False" />
+                <line number="26" hits="1" branch="False" />
+                <line number="28" hits="4" branch="False" />
+                <line number="29" hits="4" branch="False" />
+                <line number="30" hits="4" branch="False" />
+                <line number="31" hits="4" branch="False" />
+                <line number="33" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="SaveDocument" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="43" hits="2" branch="False" />
+                <line number="45" hits="2" branch="False" />
+                <line number="46" hits="2" branch="False" />
+                <line number="47" hits="1" branch="False" />
+                <line number="49" hits="1" branch="False" />
+                <line number="50" hits="1" branch="False" />
+                <line number="51" hits="1" branch="False" />
+                <line number="52" hits="1" branch="False" />
+                <line number="54" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="CloseDocument" signature="(System.Boolean)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="61" hits="2" branch="False" />
+                <line number="63" hits="2" branch="False" />
+                <line number="64" hits="2" branch="False" />
+                <line number="65" hits="1" branch="False" />
+                <line number="67" hits="1" branch="False" />
+                <line number="68" hits="1" branch="False" />
+                <line number="69" hits="1" branch="False" />
+                <line number="70" hits="1" branch="False" />
+                <line number="72" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(MQ.Office.MCP.Server.Word.IWordService,Microsoft.Extensions.Logging.ILogger`1&lt;MQ.Office.MCP.Server.Word.WordTools&gt;)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="10" hits="9" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="10" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="5" branch="False" />
+            <line number="23" hits="5" branch="False" />
+            <line number="24" hits="5" branch="False" />
+            <line number="25" hits="1" branch="False" />
+            <line number="26" hits="1" branch="False" />
+            <line number="28" hits="4" branch="False" />
+            <line number="29" hits="4" branch="False" />
+            <line number="30" hits="4" branch="False" />
+            <line number="31" hits="4" branch="False" />
+            <line number="33" hits="5" branch="False" />
+            <line number="43" hits="2" branch="False" />
+            <line number="45" hits="2" branch="False" />
+            <line number="46" hits="2" branch="False" />
+            <line number="47" hits="1" branch="False" />
+            <line number="49" hits="1" branch="False" />
+            <line number="50" hits="1" branch="False" />
+            <line number="51" hits="1" branch="False" />
+            <line number="52" hits="1" branch="False" />
+            <line number="54" hits="2" branch="False" />
+            <line number="61" hits="2" branch="False" />
+            <line number="63" hits="2" branch="False" />
+            <line number="64" hits="2" branch="False" />
+            <line number="65" hits="1" branch="False" />
+            <line number="67" hits="1" branch="False" />
+            <line number="68" hits="1" branch="False" />
+            <line number="69" hits="1" branch="False" />
+            <line number="70" hits="1" branch="False" />
+            <line number="72" hits="2" branch="False" />
+            <line number="10" hits="9" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="10" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

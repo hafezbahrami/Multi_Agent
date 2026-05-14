@@ -1,0 +1,51 @@
+name: $(SourceBranchName)-$(Version).$(Revision)
+
+trigger:
+  - main
+
+pr:
+  - main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  - name: Version
+    value: '0.1.0'
+  - name: Revision
+    value: $[counter(format('{0}.{1}', variables['Version'], variables['build.reason']), 0)]
+
+steps:
+  - checkout: self
+    clean: true
+    displayName: 'Checkout'
+
+  - task: UseDotNet@2
+    inputs:
+      packageType: 'sdk'
+      version: '10.0.x'
+      includePreviewVersions: true
+    displayName: 'Install .NET 10 SDK'
+
+  - script: |
+      cd $(Build.SourcesDirectory)/ci-scripts
+      build.bat $(Version).$(Revision)
+    displayName: 'Build'
+
+  - script: |
+      cd $(Build.SourcesDirectory)/ci-scripts
+      test.bat
+    displayName: 'Unit Tests'
+
+  - script: |
+      cd $(Build.SourcesDirectory)/ci-scripts
+      publish.bat $(Version).$(Revision)
+    condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+    displayName: 'Publish'
+
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathToPublish: '$(Build.SourcesDirectory)/TestResults/LocalArtifactPreStaging'
+      artifactName: 'MQ.Office.MCP.Server'
+    condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+    displayName: 'Publish Artifact'

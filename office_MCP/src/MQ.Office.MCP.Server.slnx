@@ -1,0 +1,11 @@
+<Solution>
+  <Project Path="MQ.Office.MCP.Server.Tests/MQ.Office.MCP.Server.Tests.csproj">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="MQ.Office.MCP.Server.IntegrationTests/MQ.Office.MCP.Server.IntegrationTests.csproj">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
+  <Project Path="MQ.Office.MCP.Server/MQ.Office.MCP.Server.csproj" />
+  <Project Path="MQ.Office.MCP.Server.Word/MQ.Office.MCP.Server.Word.csproj" />
+  <Project Path="MQ.Office.MCP.Server.Excel/MQ.Office.MCP.Server.Excel.csproj" />
+</Solution>
